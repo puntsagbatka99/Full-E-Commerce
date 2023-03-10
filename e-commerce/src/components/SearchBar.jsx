@@ -65,9 +65,9 @@ export default function SearchBar(props) {
                 aria-label="Search"
                 aria-describedby="search-addon"
               />
-              <button type="button" className="btn btn-warning">
-                search
-              </button>
+              <Link to={"/search"}><button  type="button" className="btn btn-warning">
+                Search
+              </button></Link>
             </div>
           </div>
 
