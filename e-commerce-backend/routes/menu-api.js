@@ -13,7 +13,9 @@ Router.post("/add", async (request, response) => {
     const body = request.body;
     console.log(body)
 
-    response.status(200).send({data: []})
+    const newMenu = new Menu(body)
+    const result = newMenu.save()
+    response.status(200).send({data: result})
 })
 
 module.exports = Router

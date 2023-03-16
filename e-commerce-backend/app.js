@@ -4,6 +4,7 @@ const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 const menuApi = require("./routes/menu-api")
+const adminApi = require("./routes/admin-api")
 
 const app = express()
 const PORT = 8081
@@ -12,6 +13,7 @@ const MONGODB_CONNECTION_STRING = "mongodb+srv://puntsagbatka99:Hujshand2020@clu
 app.use(express.json())
 app.use(cors())
 app.use("/menu", menuApi)
+app.use("/admin", adminApi)
 
 
 app.listen(PORT, ()=>{
